@@ -13,18 +13,15 @@ import { styled } from '@mui/material/styles';
 import ClearIcon from '@mui/icons-material/Clear';
 import PanoramaFishEyeIcon from '@mui/icons-material/PanoramaFishEye';
 
-function Table ({ whose_turn, change_turn, is_sound_on }) {
-    const [ox_arr, set_ox_arr] = useState([
-        {id: 0, value: ''},
-        {id: 1, value: ''},
-        {id: 2, value: ''},
-        {id: 3, value: ''},
-        {id: 4, value: ''},
-        {id: 5, value: ''},
-        {id: 6, value: ''},
-        {id: 7, value: ''},
-        {id: 8, value: ''}
-    ])
+function Table ({ 
+    whose_turn, 
+    change_turn, 
+    is_sound_on, 
+    ox_arr, 
+    set_ox_arr, 
+    winner, 
+    set_winner 
+}) {
     const sound = new Audio('music/stab_lightly.mp3');
 
     const Item = styled(Paper)(() => ({
@@ -48,7 +45,6 @@ function Table ({ whose_turn, change_turn, is_sound_on }) {
         })
         set_ox_arr(new_ox_arr);
     };
-    const [winner, set_winner] = useState('');
     const lines = [
         [0, 1, 2],
         [3, 4, 5],

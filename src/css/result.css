@@ -1,0 +1,121 @@
+.result,
+.result_o,
+.result_x {
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.result {
+    animation-name: bgcolor;
+    animation-duration: 0.8s;
+    animation-iteration-count: 3;
+}
+.result_o {
+    animation-name: bgcolor_o;
+    animation-duration: 0.8s;
+    animation-iteration-count: 3;
+}
+.result_x {
+    animation-name: bgcolor_x;
+    animation-duration: 0.8s;
+    animation-iteration-count: 3;
+}
+
+@keyframes bgcolor {
+    from {
+        background-color: #ffcf38;
+    }
+
+    to {
+        background-color: transparent;
+    }
+}
+
+@keyframes bgcolor_o {
+    from {
+        background-color: #0097e4;
+    }
+
+    to {
+        background-color: transparent;
+    }
+}
+
+@keyframes bgcolor_x {
+    from {
+        background-color: #e34200;
+    }
+
+    to {
+        background-color: transparent;
+    }
+}
+
+.oo_win {
+    color: #0097e4;
+}
+
+.xx_win {
+    color: #e34200;
+}
+
+.tie {
+    color: #ffcf38;
+}
+
+.oo_win,
+.xx_win,
+.tie {
+    animation-name: ooxx;
+    animation-duration: 1s;
+    font-size: 70px;
+    font-weight: bold;
+    text-shadow: -3px 0 3px black, 0 3px 3px black, 3px 0 3px black, 0 -3px 3px black;
+}
+
+@keyframes ooxx {
+    from {
+        font-size: 40px;
+    }
+
+    to {
+        font-size: 70px;
+    }
+ 
+}
+
+.home_btn {
+    margin-top: 20px;
+    width: 150px;
+    height: 50px;
+
+    font-size: 25px;
+    background-color: #fff378;
+    border: 5px solid #ffcf38;
+    border-radius: 5px;
+    color: #574c43;
+    font-weight: bold;
+    box-shadow: 5px 5px 5px gray;
+    visibility: hidden;
+
+    animation-name: show_btn;
+    animation-duration: 0s;
+    animation-delay: 2.4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes show_btn {
+    to {
+        visibility: visible;
+    }
+}
+
+.home_btn:hover {
+    text-shadow: 0px 0px 5px #ffa600;
+    box-shadow: 5px 5px 8px gray, 0px 0px 25px #fff200;
+}
