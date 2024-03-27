@@ -1,20 +1,21 @@
+.table {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .game_table {
     width: 450px;
 }
 
-.cell_0,
-.cell_1,
-.cell_2,
-.cell_3,
-.cell_4,
-.cell_5,
-.cell_6,
-.cell_7,
-.cell_8
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(235, 235, 235, 0.8);
-    height: 150px;
+.o_style {
+    color: #0097e4;
+    font-size: 60px !important;
+}
+
+.x_style {
+    color: #e34200;
+    font-size: 70px !important;
 }

@@ -1,6 +1,30 @@
-.Home {
+.gamepage {
+    display: flex; 
+    flex-direction: row;
 }
 
-.Game {
+.homepage {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+.start_btn {
+    width: 150px;
+    height: 50px;
+    font-size: 25px;
+    background-color: #fff378;
+    border: 5px solid #ffcf38;
+    border-radius: 5px;
+    color: #574c43;
+    font-weight: bold;
+    box-shadow: 5px 5px 5px gray;
+}
+
+.start_btn:hover {
+    text-shadow: 0px 0px 5px #ffa600;
+    box-shadow: 5px 5px 8px gray, 0px 0px 25px #fff200;
 }

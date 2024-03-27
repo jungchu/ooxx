@@ -1,7 +1,13 @@
+//css
+import '../css/o_person.css'
+
 function O_person({ whose_turn }) {
     return (
-        <div>
-            {(whose_turn) ? <img src='images/oo.png'/> : <img src='images/oo_gray.png'/>}
+        <div className='o_person'>
+            {(whose_turn) ? 
+                <img className='img_style' src='images/oo.png'/> : 
+                <img className='img_style' src='images/oo_gray.png'/>
+            }
         </div>
     );
 }

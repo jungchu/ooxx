@@ -3,14 +3,16 @@ import { useState, useEffect, useRef } from 'react';
 //icon
 import VolumeMuteIcon from '@mui/icons-material/VolumeMute';
 import VolumeUpIcon from '@mui/icons-material/VolumeUp';
+import MusicOffIcon from '@mui/icons-material/MusicOff';
+import MusicNoteIcon from '@mui/icons-material/MusicNote';
 
-function Toolbar() {
-    const [is_sound_on, set_is_sound_on] = useState(false);
+function Toolbar({ is_sound_on, change_sound }) {
+    const [is_music_on, set_is_music_on] = useState(false);
     const bg_music = useRef();
 
-    const change_sound = (is_sound_on) => {
-        set_is_sound_on(is_sound_on);
-        (is_sound_on) ? bg_music.current.play() : bg_music.current.pause();
+    const change_music = (is_music_on) => {
+        set_is_music_on(is_music_on);
+        (is_music_on) ? bg_music.current.play() : bg_music.current.pause();
     };
 
     return (
@@ -19,13 +21,22 @@ function Toolbar() {
             style={{
                 position: 'fixed', 
                 bottom: 0,
+                display: 'flex',
+                justifyContent: 'flex-end',
+                alignItems: 'center',
                 width: '100vw', 
-                backgroundColor: '#dcdcdcd1'
+                height: '40px',
+                backgroundColor: '#edededd1'
             }}
         >
             {is_sound_on ? 
-                <VolumeMuteIcon onClick={() => change_sound(false)}/> :
-                <VolumeUpIcon onClick={() => change_sound(true)}/>
+                <VolumeMuteIcon style={{color: '#5b5b5b', margin: '2px 15px 0 0'}} onClick={() => change_sound(false)}/> :
+                <VolumeUpIcon style={{color: '#5b5b5b', margin: '2px 15px 0 0'}} onClick={() => change_sound(true)}/>
+            }
+
+            {is_music_on ? 
+                <MusicOffIcon style={{color: '#5b5b5b', margin: '2px 15px 0 0'}} onClick={() => change_music(false)}/> :
+                <MusicNoteIcon style={{color: '#5b5b5b', margin: '2px 15px 0 0'}} onClick={() => change_music(true)}/>
             }
             <audio ref={bg_music}>
                 <source src='music/bgm.mp3' type='audio/mpeg' />
