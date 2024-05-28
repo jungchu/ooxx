@@ -3,10 +3,31 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-
-    padding: 0 0 40px 50px;
+    padding: 0 10px 40px 50px;
 }
 
 .img_style {
     width: 120px;
+}
+
+@media only screen and (max-width: 850px) {
+    .img_style {
+        width: 80px !important;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .o_person {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0 0 0;
+
+        margin-top: 60px;
+    }
+
+    .img_style {
+        width: 80px !important;
+    }
 }

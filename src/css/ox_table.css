@@ -1,6 +1,6 @@
 .table {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,6 +8,10 @@
 
 .game_table {
     width: 450px;
+}
+
+.ox_item {
+    height: 150px;
 }
 
 .o_style {
@@ -18,4 +22,24 @@
 .x_style {
     color: #e34200;
     font-size: 70px !important;
+}
+
+@media only screen and (max-width: 850px) {
+    .game_table {
+        width: 333px;
+    }
+    
+    .ox_item {
+        height: 111px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .game_table {
+        width: 300px;
+    }
+    
+    .ox_item {
+        height: 100px;
+    }
 }

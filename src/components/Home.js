@@ -82,7 +82,12 @@ function Home () {
                     <div className='homepage'>
                         <div>
                             <div>
-                                <img style={{marginBottom : '50px'}} src='images/logo.png' alt="OOXX" width="500" height="250" />
+                                <img 
+                                    className='homepage_logo'
+                                    style={{marginBottom : '50px'}} 
+                                    src='images/logo.png' 
+                                    alt="OOXX" 
+                                />
                             </div>
                             <button 
                                 className='start_btn'
