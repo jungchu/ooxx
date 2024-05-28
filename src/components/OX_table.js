@@ -24,15 +24,16 @@ function Table ({
 }) {
     const sound = new Audio('music/stab_lightly.mp3');
 
-    const Item = styled(Paper)(() => ({
-        height: '150px',
-        backgroundColor: 'rgba(235, 235, 235, 0.8)',
-        textAlign: 'center',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        boxShadow: 'none'
-    }));
+    const Item = styled(Paper)(() => (
+        {
+            backgroundColor: 'rgba(235, 235, 235, 0.8)',
+            textAlign: 'center',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            boxShadow: 'none'
+        }
+    ));
 
     const give_ox = (index) => {
         const new_ox_arr = ox_arr.map((ox, i) => {

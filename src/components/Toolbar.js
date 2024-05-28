@@ -23,7 +23,7 @@ function Toolbar({ is_sound_on, is_music_on, set_is_music_on, change_sound }) {
                 display: 'flex',
                 justifyContent: 'flex-end',
                 alignItems: 'center',
-                width: '100vw', 
+                width: '100%', 
                 height: '40px',
                 backgroundColor: '#edededd1'
             }}
