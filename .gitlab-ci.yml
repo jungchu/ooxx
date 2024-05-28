@@ -1,13 +1,8 @@
-image: node:20 # 或者使用你需要的 Node.js 版本
-
-before_script:
-  # Functions that should be executed before the build script is run
-  - npm install
-
 pages:
+  stage: deploy
+
   script:
-    # Specify the steps involved to build your app here
-    - npm run build
+    - echo "The site will be deployed to $CI_PAGES_URL"
 
   artifacts:
     paths:
