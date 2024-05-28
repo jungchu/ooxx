@@ -4,9 +4,9 @@ import { useState } from 'react';
 import '../css/home.css';
 
 //components
-import O_person from './O_person';
-import X_person from './X_person';
-import OX_table from './OX_table';
+import OPerson from './O_person';
+import XPerson from './X_person';
+import OXTable from './OX_table';
 import Toolbar from './Toolbar';
 import Result from './Result';
 
@@ -62,8 +62,8 @@ function Home () {
                                 /> 
                                 : 
                                 <div className='gamepage'>
-                                    <O_person whose_turn={ whose_turn }/>
-                                    <OX_table 
+                                    <OPerson whose_turn={ whose_turn }/>
+                                    <OXTable 
                                         whose_turn={ whose_turn } 
                                         change_turn={change_turn} 
                                         is_sound_on={is_sound_on}
@@ -72,7 +72,7 @@ function Home () {
                                         winner={winner}
                                         set_winner={set_winner}
                                     />
-                                    <X_person whose_turn={ whose_turn }/>
+                                    <XPerson whose_turn={ whose_turn }/>
                                 </div>  
                         }   
                     </>

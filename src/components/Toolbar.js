@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useRef } from 'react';
 
 //icon
 import VolumeMuteIcon from '@mui/icons-material/VolumeMute';
