@@ -1,14 +1,13 @@
 image: node:20 # 或者使用你需要的 Node.js 版本
 
-stages:
-  - build
+before_script:
+  # Functions that should be executed before the build script is run
+  - npm install
 
-build_job:
-  stage: build
-  
+pages:
   script:
-    - npm install
-    - npm run build
+    # Specify the steps involved to build your app here
+    - npm build
 
   artifacts:
     paths:
