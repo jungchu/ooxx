@@ -37,17 +37,8 @@
     box-shadow: 5px 5px 8px gray, 0px 0px 25px #fff200;
 }
 
-@media only screen and (max-width: 850px) {
-    body {
-        background-color: rgb(173, 230, 210);
-    }
-}
 
 @media only screen and (max-width: 650px) {
-    body {
-        background-color: lightblue;
-    }
-
     .gamepage {
         display: flex; 
         flex-direction: column;
