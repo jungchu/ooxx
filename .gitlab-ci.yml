@@ -1,15 +1,29 @@
-pages:
-  stage: deploy
+image: node:20
 
+cache:
+  paths:
+    - node_modules/
+
+before_script:
+  - npm install
+
+stages:
+  - build
+
+build:
+  stage: build
   script:
-    - echo "The site will be deployed to $CI_PAGES_URL"
-
+    - npm run build
   artifacts:
     paths:
-      # The folder that contains the built files to be published. This
-      # must be called "public".
+      - public
+
+pages:
+  stage: deploy
+  script:
+    - cp -r build/ public/
+  artifacts:
+    paths:
       - public
   only:
-    # Trigger a new build and deploy only when there is a push to the
-    # below branch(es)
-    - master
+    - main
